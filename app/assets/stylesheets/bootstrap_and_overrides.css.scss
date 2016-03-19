@@ -1,0 +1,84 @@
+$navbar-height:                    60px;
+$border-radius-base:               30px;
+
+// @navbar-border-radius:             $border-radius-base;
+
+
+$navbar-default-color:             transparent;
+$navbar-default-bg:                transparent;
+$navbar-default-border:            transparent;
+
+$orange: #D23900;
+
+@import url(https://fonts.googleapis.com/css?family=Kalam:400,700&subset=latin,latin-ext);
+@import "bootstrap";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  background-color: transparent;
+  min-height: 100%;
+  padding-bottom: 220px!important;
+  background: image-url("mouse.png") no-repeat bottom right;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+html {
+  //background: image-url("mouse.png") no-repeat bottom right fixed #c9f0ff;
+  background: -webkit-linear-gradient(left top, #c9f0ff, white);
+  height: 100%;
+  //background: image-url("mouse.png") no-repeat bottom right fixed #c9f0ff;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+}
+
+
+
+nav {
+  margin-top: 20px;
+  img {
+    width: 150px;
+    margin-top: -10px;
+  }
+  .navbar-nav {
+    li.active a, li a:hover {
+      background-color: #D23900!important;
+      color: white!important;
+      border-radius: 40px;
+    }
+    a {
+      margin-left: 10px;
+    }
+  }
+
+}
+
+.cover-photo {
+  min-height: 500px;
+  width: 100%;
+  background: no-repeat bottom right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+h1, h2, h3, h4 {
+  font-family: 'Kalam';
+  font-weight: bold;
+  color: $orange
+}

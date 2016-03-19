@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+html
+  head
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    title= 'Miskolincek'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+
+    = csrf_meta_tags
+
+  body
+    /! Fixed navbar
+    nav.navbar.navbar-default
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand href="/"
+            = image_tag 'logo.png'
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            - pages = [['home', 'Domov'], ['zgoscenka', 'Zgoščenka'],['predstave', 'Predstave'],['ekipa', 'Ekipa'],['mnenja', 'Mnenja'], ['reference', 'Reference'], ['vizija', 'Vizija'], ['kontakt', 'Kontakt']]
+            - pages.each do |page|
+              li class=(page[0] == @page ? 'active' : '')
+                - page[0] = '' if page[0] == 'home'
+                a href="/#{page[0]}"  #{page[1]}
+
+            li.dropdown.hidden
+              a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+                | Dropdown
+                span.caret
+              ul.dropdown-menu
+                li
+                  a href="#"  Action
+                li
+                  a href="#"  Another action
+                li
+                  a href="#"  Something else here
+                li.divider role="separator"
+                li.dropdown-header Nav header
+                li
+                  a href="#"  Separated link
+                li
+                  a href="#"  One more separated link
+        /! /.nav-collapse
+
+    /! Begin page content
+    = yield
+
+
+    / footer.footer
+    /   .container
+    /     p.text-muted Place sticky footer content here.
+
+  = javascript_include_tag 'application', 'data-turbolinks-track' => false
+
+
+
