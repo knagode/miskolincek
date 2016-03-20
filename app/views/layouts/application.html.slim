@@ -1,9 +1,19 @@
 <!DOCTYPE html>
+- pages = [['predstave', 'Predstave'], ['zgoscenka', 'Zgoščenka'],['ekipa', 'Ekipa'],['mnenja', 'Mnenja'], ['vizija', 'Vizija'],['reference', 'Reference'], ['kontakt', 'Kontakt']]
 html
   head
     meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+    meta http-equiv="Content-Language" content="sl"
 
-    title= 'Miskolincek'
+    title
+      = "Miškolinček - didaktične pesmice za otroke."
+      - if @page && @page != 'html'
+        - pages.each do |page|
+          - if @page == page[0]
+            = " | #{page[1]}"
+
+
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
 
     = csrf_meta_tags
@@ -32,7 +42,6 @@ html
             | Miškolinček
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
-            - pages = [['predstave', 'Predstave'], ['zgoscenka', 'Zgoščenka'],['ekipa', 'Ekipa'],['mnenja', 'Mnenja'], ['vizija', 'Vizija'],['reference', 'Reference'], ['kontakt', 'Kontakt']]
             - pages.each do |page|
               li class=(page[0] == @page ? 'active' : '')
                 - page[0] = '' if page[0] == 'home'
