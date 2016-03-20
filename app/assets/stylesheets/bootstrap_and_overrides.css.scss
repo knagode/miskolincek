@@ -98,6 +98,52 @@ nav {
   }
 }
 
+@media only screen and (max-width: $grid-float-breakpoint) {
+  .cover-photo, .cover-photo-orange {
+    background-position: center center !important;
+  }
+  .navbar-default .navbar-nav > li > a{
+    margin-right: 15px;
+    margin-bottom: 7px;
+  }
+
+}
+
+.navbar-brand {
+  font-family: 'Kalam';
+  color: $orange!important;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 300%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-style: 50px;
+  margin-bottom: -10px;
+  margin-top: 8px;
+}
+
+
+@media only screen and (min-width: $grid-float-breakpoint) and (max-width: 1100px) {
+
+
+}
+
+@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+  .navbar-brand {
+    font-size: 220%;
+  }
+
+  .navbar-default .navbar-nav {
+    li.vizija {
+      display: none;
+    }
+    li a {
+      padding-right: 6px;
+      padding-left: 6px;
+    }
+  }
+}
+
+
 
 h1, h2, h3, h4 {
   font-family: 'Kalam';
@@ -125,22 +171,14 @@ h1, h2, h3, h4 {
   margin-bottom: 30px;
 }
 
-.navbar-brand {
-  font-family: 'Kalam';
-  color: $orange!important;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 300%;
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-  font-style: 50px;
-  margin-bottom: -10px;
-  margin-top: 8px;
-}
 
 .carousel-caption {
-  left: 10%;
-  right: 50%;
-  padding-bottom: 80px;
+  @media only screen and (min-width: $grid-float-breakpoint) {
+    left: 10%;
+    right: 50%;
+    padding-bottom: 80px;
+  }
+
   h1 {
     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
   }
