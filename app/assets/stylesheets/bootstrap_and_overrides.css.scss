@@ -21,7 +21,7 @@ body {
   /* Margin bottom by footer height */
   background-color: transparent;
   min-height: 100%;
-  padding-bottom: 220px!important;
+  padding-bottom: 260px!important;
   background: image-url("mouse.png") no-repeat bottom right;
 }
 .footer {
@@ -36,7 +36,7 @@ body {
 
 html {
   //background: image-url("mouse.png") no-repeat bottom right fixed #c9f0ff;
-  background: -webkit-linear-gradient(left top, #c9f0ff, white);
+  background: -webkit-linear-gradient(left  , #c9f0ff, white);
   height: 100%;
   //background: image-url("mouse.png") no-repeat bottom right fixed #c9f0ff;
   // -webkit-background-size: cover;
@@ -50,8 +50,8 @@ html {
 nav {
   margin-top: 20px;
   img {
-    width: 150px;
-    margin-top: -10px;
+    width: 205px;
+    margin-top: -17px;
   }
   .navbar-nav {
     li.active a, li a:hover {
@@ -69,11 +69,33 @@ nav {
 .cover-photo {
   min-height: 500px;
   width: 100%;
-  background: no-repeat bottom right;
+  background: no-repeat center right;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.cover-photo-orange {
+  background: no-repeat center right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: $orange;
+  background-image: image-url("orange_bg.jpg");
+  color: white;
+  h1, h2, h3 {
+    color: white;
+  }
+  .container {
+    padding: 30px 0;
+  }
+
+  .btn-primary {
+    background: white;
+    color: $orange;
+  }
 }
 
 
@@ -82,3 +104,60 @@ h1, h2, h3, h4 {
   font-weight: bold;
   color: $orange
 }
+
+.row {
+  ul.violet {
+    padding: 20px 20px 20px 50px;
+    background-color: #93c452;
+    margin-top: 20px;
+    color: white;
+    margin-right: 100px;
+    border-radius: 20px;
+    font-size: 120%;
+    font-family: 'Kalam';
+  }
+  img {
+    border-radius: 20px;
+  }
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.navbar-brand {
+  font-family: 'Kalam';
+  color: $orange!important;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 300%;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-style: 50px;
+  margin-bottom: -10px;
+  margin-top: 8px;
+}
+
+.carousel-caption {
+  left: 10%;
+  right: 50%;
+  padding-bottom: 80px;
+  h1 {
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+  }
+  p {
+    font-family: 'Kalam';
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+}
+
+.btn-primary {
+  font-family: 'Kalam';
+  background-color: $orange;
+  border: none;
+  border-radius: 30px;
+}
+
+// .fb-page {
+//   margin-top: -6px;
+// }

@@ -1,13 +1,13 @@
 .container
   h1= 'Ekipa Miškolinček'
-  .row
-    .col-sm-6
+  .row.section
+    .col-sm-8
       h2 Družina Urh
-      | Pojoča, migetajoča, ustvarjalna, igriva, razigrana, z dogodivščinami prežeta družinica, ki jo sestavljajo tri navihane Miškolinke: Eva, Manca in Žana ter Miškolinčkova mama Damjana in Miškolinčkov očka Valter. Doma smo tam, kjer odmeva: »Juhej si zapoj!«
-    .col-sm-6
+      .lead Pojoča, migetajoča, ustvarjalna, igriva, razigrana, z dogodivščinami prežeta družinica, ki jo sestavljajo tri navihane Miškolinke: Eva, Manca in Žana ter Miškolinčkova mama Damjana in Miškolinčkov očka Valter. Doma smo tam, kjer odmeva: »Juhej si zapoj!«
+    .col-sm-4
       = image_tag 'druzina_urh.jpg', class: 'img-responsive'
 
-  .row
+  .row.section
     .col-sm-3= image_tag 'portreti/damjana.jpg', class: 'img-responsive'
     .col-sm-9
       h2 Damjana Urh
@@ -27,15 +27,15 @@
       br
       | Biti mama pa je nekaj posebnega – v času nosečnosti in prvih letih materinstva se je v meni prebudil nov ustvarjalni Jaz. Takrat sem začela s pisanjem pesmic in melodij za najmlajše. Nastal je Miškolinček – glavni junak otroških didaktičnih pesmic.
 
-  .row
+  .row.section
     .col-sm-3= image_tag 'portreti/valter.jpg', class: 'img-responsive'
     .col-sm-9
       h2 Valter Urh
       | Ponosni očka in mož, žabec – vokalist, multipraktik, človek, ob katerem ti ni nikoli dolgčas, ki te nasmeje in vedno ustvari dogodivščino, magister dediščinskega turizma
-    br
-    br
-    | Kot otrok sem osvajal osnove trobente). Nadaljnje glasbeno udejstvovanje je bilo povezano s petjem. Solo petje, petje v različnih zborih, trenutno član vokalne zasedbe Goldinarji. Zelo rad posežem po kitari in za hčerkice ustvarim »žur«. Uživam v naravi in z njo, ona je moja največja učiteljica. Veliko praktičnih znanj, spretnosti in veščin za življenje sem pridobil pri skavtih. Sem srečen očka in mož – kar nakažem tudi v pesmici Žabec ;-)
-  .row
+      br
+      br
+      | Kot otrok sem osvajal osnove trobente). Nadaljnje glasbeno udejstvovanje je bilo povezano s petjem. Solo petje, petje v različnih zborih, trenutno član vokalne zasedbe Goldinarji. Zelo rad posežem po kitari in za hčerkice ustvarim »žur«. Uživam v naravi in z njo, ona je moja največja učiteljica. Veliko praktičnih znanj, spretnosti in veščin za življenje sem pridobil pri skavtih. Sem srečen očka in mož – kar nakažem tudi v pesmici Žabec ;-)
+  .row.section
     .col-sm-3= image_tag 'portreti/sestre_urh.jpg', class: 'img-responsive'
     .col-sm-9
       h2 Eva Urh
@@ -45,7 +45,7 @@
       h2 Žana
       | Miškolinčkova najmljaša sestrica, poskočno navihana, Miškolinčku je posodila svoj srčni utrip iz maternice
 
-  .row
+  .row.section
     .col-sm-3= image_tag 'portreti/miskolinke.jpg', class: 'img-responsive'
     .col-sm-9
       h2 Miškolinke
@@ -53,9 +53,9 @@
       br
       br
       | Mia Rebec, Laura Žmak, Iza Vidmar, Patricija Mulec, Špela Pišljar, Taja Zrimšek, Karin Doles, Eva Urh, Manca Urh in Žana Urh
-  .row
-    .col-sm-2= image_tag 'portreti/ana.jpg', class: 'img-responsive'
-    .col-sm-10
+  .row.section
+    .col-sm-3= image_tag 'portreti/ana.jpg', class: 'img-responsive'
+    .col-sm-9
       h2 Ana Celin Lenarčič
       | Miškolinčkova aranžerka, akademska glasbenica – glasbena pedagoginja in komponistka, pianistka, polna glasbenih idej, vedno pripravljena, naš sonček.
       br
@@ -64,51 +64,57 @@
 
 
   .row
-    .col-sm-2= image_tag 'portreti/miha.jpg', class: 'img-responsive'
-    .col-sm-10
-      h2 Miha Šušteršič
-      | Pianist, kitarist, aranžer Miškolinčkove uspavanke Male Miške, za klavirjem in kitaro vedno naredi žur, vedno pripravljen.
+    .col-sm-6
+      .row.section
+        .col-sm-4= image_tag 'portreti/miha.jpg', class: 'img-responsive'
+        .col-sm-8
+          h4 Miha Šušteršič
+          | Pianist, kitarist, aranžer Miškolinčkove uspavanke Male Miške, za klavirjem in kitaro vedno naredi žur, vedno pripravljen.
+    .col-sm-6
+      .row.section
+        .col-sm-4= image_tag 'portreti/leon.jpg', class: 'img-responsive'
+        .col-sm-8
+          h4 Leon Posega
+          | Uživač na bas kitari, vedno pripravljen in nikoli star….
 
   .row
-    .col-sm-2= image_tag 'portreti/leon.jpg', class: 'img-responsive'
-    .col-sm-10
-      h2 Leon Posega
-      | Uživač na bas kitari, vedno pripravljen in nikoli star….
+    .col-sm-6
+      .row.section
+        .col-sm-4= image_tag 'portreti/nezka.jpg', class: 'img-responsive'
+        .col-sm-8
+          h4 Neżka Bogataj
+          | Nežna, kot so nežne njene citre…
+    .col-sm-6
+      .row.section
+        .col-sm-4= image_tag 'portreti/tina.jpg', class: 'img-responsive'
+        .col-sm-8
+          h4 Tina Knafelc
+          | Fviolinistka, ki je takoj za akcijo…
 
   .row
-    .col-sm-2= image_tag 'portreti/nezka.jpg', class: 'img-responsive'
-    .col-sm-10
-      h2 Neżka Bogataj
-      | Nežna, kot so nežne njene citre…
-
-  .row
-    .col-sm-2= image_tag 'portreti/tina.jpg', class: 'img-responsive'
-    .col-sm-10
-      h2 Tina Knafelc
-      | Fviolinistka, ki je takoj za akcijo…
-
-  .row
-    .col-sm-2= image_tag 'portreti/tjasa.jpg', class: 'img-responsive'
-    .col-sm-10
-      h2 Tjaša Posega
-      | Flavtistka, ki te popelje med ptičke in še dlje…
-
-  .row
-    .col-sm-2= image_tag 'portreti/studio.jpg', class: 'img-responsive'
-    .col-sm-10
-      h2 Snemalna ekipa - Studio Koper
-      | Ksenija Kos – glasbena producentka ter tonski mojster Drago Hrvatin sta poskrbela, da slišite tako, kot je treba. Zahvala gre tudi odgovornemu uredniku Andreju Šavko in Miškolinčkovi »botri« – Smilji Baranja, ki je ves čas verjela v nas.
-      br
-      | Snemanje je potekalo v snemalnem studiu Hendrix, Radia Koper.
+    .col-sm-6
+      .row.section
+        .col-sm-4= image_tag 'portreti/tjasa.jpg', class: 'img-responsive'
+        .col-sm-8
+          h4 Tjaša Posega
+          | Flavtistka, ki te popelje med ptičke in še dlje…
+    .col-sm-6
+      .row.section
+        .col-sm-4= image_tag 'portreti/studio.jpg', class: 'img-responsive'
+        .col-sm-8
+          h4 Radio Koper
+          | <b>Ksenija Kos</b> – glasbena producentka ter tonski mojster <b>Drago Hrvatin</b> sta poskrbela, da slišite tako, kot je treba. Zahvala gre tudi odgovornemu uredniku <b>Andreju Šavko</b> in Miškolinčkovi »botri« – <b>Smilji Baranja</b>, ki je ves čas verjela v nas.
+          br
+          | Snemanje je potekalo v snemalnem studiu Hendrix, Radia Koper.
 
 
-  h1 Ostali, ki sodelujejo pri projektu
+  h1 Ostali, ki so sodelovali pri projektu
 
   h2 Miškolinčkova podoba
-  | Ilustrator Tomaž Verbič Šalamon je znal prisluhniti našim željam in narisal Miškolinčka kot iz naših sanj. Tomaž je avtor številnih ilustracij, ki jih lahko srečamo v različnih učbenikih, delovnih zvezkih ipd.
+  | Ilustrator <b>Tomaž Verbič Šalamon</b> je znal prisluhniti našim željam in narisal Miškolinčka kot iz naših sanj. Tomaž je avtor številnih ilustracij, ki jih lahko srečamo v različnih učbenikih, delovnih zvezkih ipd.
 
   h2 Grafično oblikovanje
-  | Jože Šušteršič – grafični oblikovalec in Klemen Nagode – računalniški programer sta v svoje strokovno tehnično oblikovanje vnesla še svoj umetniški čut in poskrbela, da se vidi lepo.
+  | <b>Jože Šušteršič</b> – grafični oblikovalec in <b>Klemen Nagode</b> – računalniški programer sta v svoje strokovno tehnično oblikovanje vnesla še svoj umetniški čut in poskrbela, da se vidi lepo.
 
   h2 Video produkcija
-  | Klemen Premrl – snemalec
+  | <b>Klemen Premrl</b> – snemalec
