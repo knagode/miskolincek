@@ -10,19 +10,47 @@ $navbar-default-border:            transparent;
 
 $orange: #D23900;
 
+
+@mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // Opera 12
+  background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient($deg, $start-color, $end-color); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient($deg, $start-color, $end-color); // Opera 12
+  background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+}
+
+
 @import url(https://fonts.googleapis.com/css?family=Kalam:400,700&subset=latin,latin-ext);
 @import "bootstrap";
 
 html {
   position: relative;
   min-height: 100%;
+  height: 100%;
 }
 body {
   /* Margin bottom by footer height */
   background-color: transparent;
   min-height: 100%;
-  padding-bottom: 260px!important;
-  background: image-url("mouse.png") no-repeat bottom right;
 }
 .footer {
   position: absolute;
@@ -33,10 +61,20 @@ body {
   background-color: #f5f5f5;
 }
 
+.root {
+  min-height: 100%;
+  @include gradient-directional(#c9f0ff, #ffffff, 90deg);
+  overflow:auto;
+  .inside-root {
+    padding-bottom: 260px!important;
+    background: image-url("mouse.png") no-repeat bottom right;
+    overflow: auto;
+  }
+}
+
 
 html {
   //background: image-url("mouse.png") no-repeat bottom right fixed #c9f0ff;
-  background: -webkit-linear-gradient(left  , #c9f0ff, white);
   height: 100%;
   //background: image-url("mouse.png") no-repeat bottom right fixed #c9f0ff;
   // -webkit-background-size: cover;
