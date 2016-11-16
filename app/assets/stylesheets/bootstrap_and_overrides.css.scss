@@ -147,6 +147,23 @@ nav {
 
 }
 
+#myModal .modal-dialog {
+  min-width:800px;
+
+  iframe {
+    height:950px;
+  }
+
+  @media only screen and (max-width: $grid-float-breakpoint) {
+    min-width:97%;
+
+    iframe {
+      height:1100px;
+    }
+  }
+}
+
+
 .navbar-brand {
   font-family: 'Kalam';
   color: $orange!important;

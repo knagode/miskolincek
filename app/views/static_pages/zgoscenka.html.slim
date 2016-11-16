@@ -8,8 +8,35 @@
         | Miškolinčkove pesmi so nastajale spontano ob tem, ko sem opazovala svoje otroke, njihov razvoj, njihovo igro in takrat, ko sem odgovarjala na radovedna otroška vprašanja ...
         br
         | Kot glasbenica in učiteljica po duši, sem odgovore podajala skozi glasbo, igro in gib. Tako se je začelo pravo glasbeno ustvarjanje. Pri tem me je nenehno vodila misel, da povežem svoje glasbeno in pedagoško znanje s srčnostjo, materinskostjo in z izkušnjami, do katerih so me pripeljali otroci.
+        / br
+        / | Zgoščenka je izšla 13. novembra 2013, v samozaložbi. Druga izdaja zgoščenke pa se je zgodila 11. novembra 2016.
+
         br
-        | Zgoščenka je izšla 13. novembra 2013, v samozaložbi.
+        br
+
+        div
+          b CENA: 10 EUR + Strošek dostave
+
+        button.btn.btn-primary.btn-lg data-target="#myModal" data-toggle="modal" type="button" style="font-size:140%; padding: 20px; margin-top: 20px"
+          span.glyphicon.glyphicon-shopping-cart
+          | Nakup zgoščenke
+        br
+        br
+        br
+
+        /! Modal
+        #myModal.modal.fade role="dialog"
+          .modal-dialog
+            /! Modal content
+            .modal-content
+              .modal-header
+                button.close data-dismiss="modal" type="button"  &times;
+                h4 Nakup
+              .modal-body
+                iframe src='http://www.miskolincek.com/php/index.php' style="width:100%;border:none"
+              .modal-footer
+
+
     .col-sm-6
       h2 Prepričajte se na lastna ušesa!
 
@@ -30,7 +57,7 @@
         li V pesmicah ima narava pogostno osrednjo vlogo, tudi zato, ker je naša Velika učiteljica. Iz nje se učimo zakonitosti življenja,  iz nje črpamo zvoke, slike… z njo se umirjamo in razveseljujemo.
         li Poleg zgoščenke je priložena knjižica z besedili in akordi ter didaktičnimi igrami, ki lahko spremljajo posamezno pesem. Z njimi še dodatno pokažem, kako velik učni in vzgojni učinek lahko s pesmicami dosežemo – izvirnost in posebnost na tržišču.
         li Pesmi so nastajale iz srca za srčeca, v njih je bilo vlitega veliko razmišljanja in ljubezni. Verjetno prav zato ostajajo pomenljive, zanimive, vseživljenjske.
-    .col-sm-6
+    .col-sm-6.pull-left
       = image_tag 'cd.png', class: 'img-responsive'
 
 
